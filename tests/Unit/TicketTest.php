@@ -32,7 +32,7 @@ class TicketTest extends TestCase
         $ticket = Ticket::factory()->for(User::factory())->make()->toArray();
         $ticket = Ticket::create(Arr::except($ticket, 'status'));
 
-        $this->assertEquals($ticket->status, 'open');
+        $this->assertEquals($ticket->fresh()->status, 'open');
     }
 
     public function test_its_owned_by_a_user()

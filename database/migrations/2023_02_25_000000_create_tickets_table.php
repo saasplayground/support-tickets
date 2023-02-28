@@ -28,7 +28,7 @@ return new class extends Migration
                 ->nullOnDelete();
             $table->string('priority')->default('low');
             $table->string('source')->default('web');
-            $table->string('status')->default('open');
+            $table->string('status')->default(SupportTickets::defaultStatus());
             $table->timestamp('resolved_at')->nullable();
             $table->timestamp('locked_at')->nullable();
             $table->timestamp('archived_at')->nullable();

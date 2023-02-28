@@ -59,7 +59,6 @@ class Ticket extends Model
     protected static function booted()
     {
         static::creating(function ($ticket) {
-            $ticket->status = SupportTickets::defaultStatus();
             $ticket->uuid = Str::uuid();
         });
     }
