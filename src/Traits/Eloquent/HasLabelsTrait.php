@@ -89,7 +89,7 @@ trait HasLabelsTrait
      */
     protected function getWorkableLabels($labels)
     {
-        if (is_int($labels)) {
+        if (is_numeric($labels)) {
             return Arr::wrap($labels);
         }
 

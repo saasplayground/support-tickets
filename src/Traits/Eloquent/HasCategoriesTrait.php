@@ -89,7 +89,7 @@ trait HasCategoriesTrait
      */
     protected function getWorkableCategories($categories)
     {
-        if (is_int($categories)) {
+        if (is_numeric($categories)) {
             return Arr::wrap($categories);
         }
 
